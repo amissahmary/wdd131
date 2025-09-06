@@ -1,0 +1,48 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(165, 165, 220);
+    padding: 1px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: medium;
+}
+
+nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+h1 {
+    color: blue;
+    border-bottom: 2px double black;
+    text-align: center;
+}
+
+header p{
+    font-size: larger;
+    text-align: left;
+    padding: 10px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 2fr,1fr;
+    align-items: center;
+}
+
+footer{
+    text-align: bottom;
+    
+}
