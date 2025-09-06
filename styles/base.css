@@ -1,0 +1,82 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: blue;
+    padding: 6px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: large;
+}
+
+nav a {
+    color: white;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+h1 {
+    color: blue;
+    border-bottom: 2px double black;
+    text-align: center;
+}
+
+main {
+    width: 98%;
+    height: 100%;
+    grid-column: 4/5;
+    margin: 1rem;
+    font-size: large;
+}
+
+div{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid blue;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    background-color: aqua;
+}
+
+#float img {
+    width: 150px;
+    height: auto;
+    border: 1px solid black;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+    float: right;
+}
+
+.card {
+    margin: 1em;
+    border: 2px dotted blue;
+    padding: 1px;
+    background-color: lightblue;
+    color: black;
+    font-size: larger;
+}
+
+.card ul{
+    font-size: larger;
+}
