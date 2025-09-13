@@ -1,0 +1,54 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+body{
+    font-size: large;
+    /* font-family: "playpen sans hebrew",cursive; */
+}
+
+header{
+    display: flex;
+    background-color: purple;
+    padding: 6px;
+    justify-content: space-around;
+    font-size: large;
+}
+
+header p{
+    flex: 1;
+    font-size: 30px;
+    color: white;
+}
+
+nav{
+    display: flex;
+    flex: 3;
+}
+
+nav a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+footer {
+    margin-top: 20px;
+    border-top: 1px solid lightskyblue;
+    text-align: center;
+    background-color: purple;
+    color: whitesmoke;
+}
