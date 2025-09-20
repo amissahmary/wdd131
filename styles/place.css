@@ -1,0 +1,46 @@
+* {
+    border: 0;
+    margin: auto;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#hero img{
+    width: 100%;
+    display: block;
+}
+
+#weather h2::after{
+    content: "⛅";
+    display: none;
+}
+
+#weather img{
+    width: 50px;
+    display: inline-block;
+}
+
+@media (min-width: 800px){
+    main{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    #weather h2::after{
+        display: inline;
+    }
+
+    #weather img{
+        display: none;
+    }
+}
