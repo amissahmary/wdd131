@@ -87,12 +87,11 @@ const temples = [
     area: 17500,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
   },
-  // Add more temple objects here...
 ];
 
 function displayTemples(filteredTemples) {
   const container = document.querySelector("#temple-cards");
-  container.innerHTML = ""; // clear previous
+  container.innerHTML = ""; 
   
   filteredTemples.forEach(temple => {
     const card = document.createElement("section");
