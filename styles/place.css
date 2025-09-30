@@ -1,22 +1,33 @@
 * {
     border: 0;
-    margin: auto;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-header,
-footer {
-    text-align: center;
-    background-color: blueviolet;
-    color: aliceblue;
+:root {
+  --primary: aliceblue;
+  --secondary: purple;
+  --accent: blueviolet;
 }
+
+body {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  color: black;
+}
+
+header, footer {
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 1rem;
+  text-align: center;
+}
+
 
 h1 {
     font-size: 40px;
-}
-
-#hero img{
-    width: 100%;
-    display: block;
 }
 
 #weather h2::after{
@@ -27,6 +38,29 @@ h1 {
 #weather img{
     width: 50px;
     display: inline-block;
+}
+
+#hero {
+  background-image: url("../images/capetown-3891441_1280.jpg");
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;
+  height: 70vh; 
+  width: 100vmax;                 
+  display: flex;                 
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
+  position: relative;
+}
+
+.overlay-content {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 800px){
@@ -42,5 +76,27 @@ h1 {
 
     #weather img{
         display: none;
+    }
+
+    #hero {
+        background-image: url("../images/capetown-3891441_1280.jpg");
+        height: 100vh; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .overlay-content {
+        position: absolute;
+        bottom: 2rem;    
+        right: 2rem;     
+        background-color: rgba(255, 255, 255, 0.8); 
+        color: black;
+        padding: 1.5rem;
+        border-radius: 12px;
+        max-width: 350px;
+    }
+
+    .overlay-content section {
+        margin-bottom: 1rem;
     }
 }

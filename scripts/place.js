@@ -7,6 +7,9 @@ short.innerHTML = `Last modified: <span class="highlight">${new Intl.DateTimeFor
 	}
 ).format(today)}</span>`;
 
+document.getElementById("currentyear").textContent = today.getFullYear();
+document.getElementById("lastmodified").textContent = `Last Modified: ${document.lastModified}`;
+
 const temp = 10;
 const windSpeed = 10;
 
