@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+body{
+    display: grid;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+}
+
 nav {
     background-color: rgb(165, 165, 220);
     padding: 1px;
@@ -11,6 +21,7 @@ nav {
     justify-content: space-around;
     text-align: center;
     font-size: medium;
+    height: 50px;
 }
 
 nav a {
@@ -24,25 +35,32 @@ nav a:hover {
     background-color: black;
 }
 
-h1 {
-    color: blue;
-    border-bottom: 2px double black;
-    text-align: center;
-}
-
-header p{
+header h1{
     font-size: larger;
     text-align: left;
     padding: 10px;
+    height: 90px;
 }
 
 main{
-    display: grid;
-    grid-template-columns: 2fr,1fr;
+    display: flex;
     align-items: center;
 }
 
+main h2{
+    flex: 2;
+    background-color: rgb(206, 206, 28);
+    height: 500px;
+}
+
+main aside{
+    flex: 1;
+    background-color: rgb(16, 200, 200);
+    height: 500px;
+}
+
 footer{
-    text-align: bottom;
-    
+    text-align: center;  
+    background-color: antiquewhite;
+    height: 90px;
 }
