@@ -7,7 +7,7 @@
 
 .noto-serif-font {
   font-family: "Noto Serif", serif;
-  font-optical-sizing: 100;
+  /* font-optical-sizing: 100; */
   font-weight: 100;
   font-style: normal;
   font-variation-settings:
