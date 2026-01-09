@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header{
+    height: auto;
+}
+
 nav {
     background-color: blue;
     display: flex;
