@@ -3,6 +3,6 @@ const today = new Date();
 short.innerHTML = `Last modified: <span class="highlight">${new Intl.DateTimeFormat(
 	"en-US",
 	{
-		dateStyle: "short"
+		dateStyle: "long"
 	}
 ).format(today)}</span>`;

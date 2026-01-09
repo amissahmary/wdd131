@@ -6,11 +6,11 @@
 
 nav {
     background-color: blue;
-    padding: 6px;
     display: flex;
     justify-content: space-around;
     text-align: center;
     font-size: large;
+    height: 40px;
 }
 
 nav a {
@@ -25,58 +25,91 @@ nav a:hover {
 }
 
 h1 {
-    color: blue;
-    border-bottom: 2px double black;
+    color: black;
     text-align: center;
 }
 
 main {
     width: 98%;
     height: 100%;
+    margin: 30px;
     grid-column: 4/5;
-    margin: 1rem;
     font-size: large;
 }
 
 div{
-     display: grid;
-     grid-template-columns: 2fr 1fr;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 60px;
+    width: 90%;
 }
 
 footer {
     margin-top: 20px;
-    border-top: 1px solid blue;
     text-align: center;
-    background-color: lightblue;
+    background-color: darkblue;
+    color: white;
+    font-size: larger;
 }
 
 #course-title {
     display: block;
     text-align: center;
     font-size: 30px;
-    background-color: aqua;
+    background-color: darkblue;
+    height: 80px;
+    color: white;
 }
 
-#float img {
+#myself {
     width: 150px;
     height: auto;
     border: 1px solid black;
-    padding: 2px;
+    margin: 2px;
+    padding: 0px;
     box-shadow: 0 0 30px gray;
     float: right;
 }
 
+#temple{
+    width: 150px;
+    height: auto;
+    float: left;
+    margin: 5px;
+}
+
 .card {
-    margin: 1em;
-    border: 2px dotted blue;
-    padding: 1px;
-    background-color: lightblue;
+    border: 1px solid black;
     color: black;
     font-size: larger;
+    border-radius: 5px;
+    height: 460px;
+}
+
+.card p{
+    padding: 10px;
+    margin: 10px;
+}
+
+.card h2{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card h3{
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 0px 20px 20px;
+    margin-top: 60px;
 }
 
 .card ul{
-    font-size: larger;
+    font-size: large;
+    list-style-position: inside;
+    margin-top: 80px;
+    margin-left: 10px;
 }
