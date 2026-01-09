@@ -4,21 +4,32 @@
     box-sizing: border-box;
 }
 
+
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 header{
     height: auto;
 }
 
 nav {
     background-color: blue;
+    color: white;
     display: flex;
     justify-content: space-around;
     text-align: center;
     font-size: large;
     height: 40px;
-    color: white;
 }
 
 nav a {
+    color: white;
     display: block;
     padding: 20px;
     text-decoration: none;
