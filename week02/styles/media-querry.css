@@ -6,9 +6,9 @@ header, main, footer{
     max-width: 640px;
     text-align: center;
     margin: 1rem, auto;
-    border: 1px solid #f524ac;
+    border: 1px solid black;
     padding: 1rem;
-    background-color: rgb(216, 8, 235);
+    background-color: rgb(39, 39, 179);
 }
 
 main{
@@ -19,5 +19,5 @@ main{
 
 section{
     padding: 1rem;
-    background-color: azure;
+    background-color: rgb(196, 247, 247);
 }
