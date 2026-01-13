@@ -1,6 +1,6 @@
 *{
-    margin: auto;
-    padding: auto;
+    margin: 2px;
+    padding: 2px;
 }
 
 body{
@@ -9,7 +9,7 @@ body{
     
 .noto-serif-font {
   font-family: "Noto Serif", serif;
-  font-optical-sizing: auto;
+  /* font-optical-sizing: auto; */
   font-weight: 100;
   font-style: normal;
 }
@@ -52,7 +52,7 @@ main{
 
 main figure{
     display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(100px));
+	/* grid-template-columns: repeat(auto-fit, minmax(100px)); */
 	grid-gap: 25px;
 	place-items: center;
 }
