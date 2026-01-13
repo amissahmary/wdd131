@@ -31,6 +31,7 @@ header p{
 nav{
     display: flex;
     flex: 1;
+    color: white;
 }
 
 nav a {
