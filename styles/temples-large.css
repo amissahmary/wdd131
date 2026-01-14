@@ -12,5 +12,16 @@
 
     nav a{
         flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    header p{
+    flex: 2;
+    }
+
+
+    main div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
