@@ -6,6 +6,9 @@
     }
 
     nav{
+        display: flex;
+        flex: 1;
+        color: white;
         justify-content: flex-end;
         flex-direction: row;
     }
