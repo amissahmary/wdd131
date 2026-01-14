@@ -53,12 +53,12 @@ main{
 
 main figure{
     display: grid;
-	grid-gap: 25px;
+	grid-gap: 5%;
 	place-items: center;
 }
 
 img{
-    width: 500px;
+    width: 80%;
     height: auto;
 }
 
