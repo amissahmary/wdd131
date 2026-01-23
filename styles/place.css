@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary: aliceblue;
-  --secondary: purple;
+  --primary: rgb(240, 248, 255);
+  --secondary: rgb(137, 4, 137);
   --accent: rgb(59, 18, 5);
 }
 
