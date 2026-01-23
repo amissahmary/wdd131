@@ -7,7 +7,7 @@
 :root {
   --primary: aliceblue;
   --secondary: purple;
-  --accent: blueviolet;
+  --accent: rgb(59, 18, 5);
 }
 
 body {
@@ -41,7 +41,7 @@ h1 {
 }
 
 #hero {
-  background-image: url("../images/capetown-3891441_1280.jpg");
+  background-image: url("../images/cjc.webp");
   background-size: cover;         
   background-position: center;    
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@ h1 {
     }
 
     #hero {
-        background-image: url("../images/capetown-3891441_1280.jpg");
+        background-image: url("../images/cjc.webp");
         height: 100vh; 
         display: flex;
         flex-direction: column;
