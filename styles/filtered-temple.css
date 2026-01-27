@@ -1,11 +1,16 @@
 *{
-    margin: auto;
-    padding: auto;
+    margin: 2px;
+    padding: 2px;
 }
 
 body{
-    font-family: "EB Garamond", serif;
     font-size: large;
+}
+    
+.noto-serif-font {
+  font-family: "Noto Serif", serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 header{
@@ -14,17 +19,19 @@ header{
     padding: 6px;
     justify-content: space-around;
     font-size: large;
+    color: white;
 }
 
 header p{
-    flex: 1;
+    flex: 2;
     font-size: 30px;
     color: white;
 }
 
 nav{
     display: flex;
-    flex: 3;
+    flex: 1;
+    color: white;
 }
 
 nav a {
@@ -35,15 +42,14 @@ nav a {
 }
 
 nav a:hover {
-    background-color: black;
+    background-color: rgb(245, 199, 199);
 }
 
 main{
-    max-width: 800px;
+    max-width: 95%;
     margin: 0 auto;
+    text-align: center;
 }
-
-
 
 footer {
     margin-top: 20px;
@@ -51,6 +57,25 @@ footer {
     text-align: center;
     background-color: purple;
     color: whitesmoke;
+}
+
+#temples{
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.temple-card{
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+#temples img {
+  width: 100%;
+  max-width: 400px;   
+  height: 250px;      
+  object-fit: cover;
+  box-shadow: 0 5px 12px black;
 }
 
 
@@ -62,11 +87,25 @@ footer {
     }
 
     nav{
+        display: flex;
+        flex: 1;
+        color: white;
         justify-content: flex-end;
         flex-direction: row;
     }
 
     nav a{
         flex: 1 1 100%;
+        padding: 10px;
+    }
+
+    header p{
+    flex: 2;
+    }
+
+
+    main div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

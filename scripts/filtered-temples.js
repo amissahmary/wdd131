@@ -4,16 +4,15 @@ const today = new Date();
 short.innerHTML = `Last modified: <span class="highlight">${new Intl.DateTimeFormat(
 	"en-US",
 	{
-		dateStyle: "short"
+		dateStyle: "long"
 	}
 ).format(today)}</span>`;
 
-const hanButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+const hanButton = document.querySelector('.hamBurger');
+const navigation = document.getElementById('nav');
 
-hanButton.addEventListener('click', () => {
+hanButton.addEventListener('click', function () {
     navigation.classList.toggle('open');
-    hanButton.classList.toggle('open');
 });
 
 const temples = [
@@ -73,13 +72,7 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  {
-    templeName: "Salt Lake",
-    location: "Salt Lake City, Utah, United States",
-    dedicated: "1893, April, 6",
-    area: 253015,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
-  },
+  // Add more temple objects here...
   {
     templeName: "Accra Ghana",
     location: "Accra, Ghana",
@@ -87,45 +80,86 @@ const temples = [
     area: 17500,
     imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
   },
+  {
+    templeName: "Johannesburg South Africa",
+    location: "Johannesburg, South Africa",
+    dedicated: "1985, August, 24",
+    area: 19184,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
+  },
+  {
+    templeName: "Helena Montana",
+    location: "Helena, Montana, United States",
+    dedicated: "2023, June, 18",
+    area: 9794,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/helena-montana-temple/helena-montana-temple-37751-main.jpg"
+  }
 ];
 
-function displayTemples(filteredTemples) {
-  const container = document.querySelector("#temple-cards");
-  container.innerHTML = ""; 
-  
-  filteredTemples.forEach(temple => {
-    const card = document.createElement("section");
-    card.classList.add("temple-card");
+const templesContainer = document.querySelector("#temples");
 
-    card.innerHTML = `
-      <h3>${temple.templeName}</h3>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+temples.forEach(temple => {
+  // Create elements
+  const card = document.createElement("article");
+  const name = document.createElement("h2");
+  const location = document.createElement("p");
+  const dedicated = document.createElement("p");
+  const area = document.createElement("p");
+  const image = document.createElement("img");
 
-    container.appendChild(card);
-  });
+  // Populate content
+  name.textContent = temple.templeName;
+  location.textContent = `Location: ${temple.location}`;
+  dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+  area.textContent = `Size: ${temple.area.toLocaleString()}sq ft`;
+
+  image.src = temple.imageUrl;
+  image.alt = temple.templeName;
+  image.loading = "lazy"; // ✅ native lazy loading
+
+  card.classList.add("temple-card");
+   
+  // Append elements to card
+  card.appendChild(name);
+  card.appendChild(location);
+  card.appendChild(dedicated);
+  card.appendChild(area);
+  card.appendChild(image);
+
+  // Append card to container
+  templesContainer.appendChild(card);
+});
+
+function getYear(temple) {
+  return Number(temple.dedicated.split(",")[0]);
 }
 
-displayTemples(temples); 
-
-document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
+document.querySelector("#home").addEventListener("click", () => {
+  displayTemples(temples);
+});
 
 document.querySelector("#old").addEventListener("click", () => {
-  displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900));
+  const oldTemples = temples.filter(t => getYear(t) < 1900);
+  displayTemples(oldTemples);
 });
 
 document.querySelector("#new").addEventListener("click", () => {
-  displayTemples(temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000));
+  const newTemples = temples.filter(t => getYear(t) > 2000);
+  displayTemples(newTemples);
 });
 
 document.querySelector("#large").addEventListener("click", () => {
-  displayTemples(temples.filter(t => t.area > 90000));
+  const largeTemples = temples.filter(t => t.area > 90000);
+  displayTemples(largeTemples);
 });
 
 document.querySelector("#small").addEventListener("click", () => {
-  displayTemples(temples.filter(t => t.area < 10000));
+  const smallTemples = temples.filter(t => t.area < 10000);
+  displayTemples(smallTemples);
 });
 
+// displayTemples(temples);
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", e => e.preventDefault());
+});
