@@ -91,3 +91,9 @@ input[type="submit"]:hover {
   background: #ddd;
 }
 
+#rate{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
