@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A product review form">
+    <meta name="description" content="A product review form for specific products in a shop purchased by customers.">
     <meta name="author" content="Mary Amissah">
     <link rel="stylesheet" href="styles/form.css">
     <script defer src="scripts/form.js"></script>
@@ -23,11 +23,26 @@
         <fieldset>
             <legend>Overall Rating</legend>
             <div id="rate">
-                <label><input type="radio" name="rating" value="5" required>☆☆☆☆☆</label>
-                <label><input type="radio" name="rating" value="4" required>☆☆☆☆</label>
-                <label><input type="radio" name="rating" value="3" required>☆☆☆</label>
-                <label><input type="radio" name="rating" value="2" required>☆☆</label>
-                <label><input type="radio" name="rating" value="1" required>☆</label>
+                <div>
+                    <input type="radio" name="rating" value="5" required id="R5">
+                    <label for="R5">☆☆☆☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" name="rating" value="4" required id="R4">
+                    <label for="R4">☆☆☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" name="rating" value="3" required id="R3">
+                    <label for="R3">☆☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" name="rating" value="2" required id="R2">
+                    <label for="R2">☆☆</label>
+                </div>
+                <div>
+                    <input type="radio" name="rating" value="1" required id="R1">
+                    <label for="R1">☆</label>
+                </div>
             </div>
         </fieldset>
 
@@ -38,10 +53,14 @@
             <legend>Which features did you find useful in the product?<br>
                 <i>(Check all that apply)</i>
             </legend>
-            <label><input type="checkbox" name="features" value="durable" id="f1"> Durability</label>
-            <label><input type="checkbox" name="features" value="ease" id="f2"> Ease of Use</label>
-            <label><input type="checkbox" name="features" value="performance" id="f3"> Performance</label>
-            <label><input type="checkbox" name="features" value="design" id="f4"> Design</label>
+            <input type="checkbox" name="features" value="durable" id="f1">
+            <label for="f1">Durability</label>
+            <input type="checkbox" name="features" value="ease" id="f2"> 
+            <label for="f2">Ease of Use</label>
+            <input type="checkbox" name="features" value="performance" id="f3"> 
+            <label for="f3">Performance</label>
+            <input type="checkbox" name="features" value="design" id="f4"> 
+            <label for="f4">Design</label>
         </fieldset>
 
         <label for="review">Written Review <i>(Optional)</i></label>

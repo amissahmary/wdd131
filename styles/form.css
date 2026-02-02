@@ -6,21 +6,21 @@
 }
 
 :root{
-    --primary: #222;
-    --secondary: #f4f4f9;
-    --tertiary: #3b0a45;
+    --primary: rgb(34, 34, 34);
+    --secondary: rgb(244, 244, 249);
+    --tertiary: rgb(59, 10, 69);
+    --pale: rgb(255, 255, 255);
 }
 
 body{
     color: var(--tertiary);
     line-height: 1.2;
     background-color: var(--secondary);
-    color: var(--primary);
 }
 
 header, footer{
     background-color: var(--tertiary);
-    color: white;
+    color: var(--pale);
     text-align: center;
     padding: 1rem;
     font-size: 1.5rem;
@@ -32,7 +32,7 @@ main{
 }
 
 form {
-  background-color: #d6cfd8; 
+  background-color: var(--secondary); 
   padding: 1.5rem;
   border-radius: 8px;
   width: 100%;
@@ -52,7 +52,7 @@ label {
 input, select, textarea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid #aaa;
+  border: 1px solid var(--primary);
   border-radius: 5px;
   font-size: 1rem;
 }
@@ -77,10 +77,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[type="submit"] {
-  background: #eee;
-  color: black;
+  background: var(--secondary);
+  color: var(--primary);
   font-weight: bold;
-  border: 1px solid #555;
+  border: 1px solid var(--tertiary);
   cursor: pointer;
   padding: 0.8rem;
   border-radius: 6px;
@@ -88,7 +88,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background: #ddd;
+  background: var(--secondary);
 }
 
 #rate{
@@ -97,3 +97,11 @@ input[type="submit"]:hover {
   justify-content: space-around;
   flex-direction: row-reverse;
 }
+
+@media(min-width: 740px){
+    body{
+    color: var(--tertiary);
+    line-height: 1;
+    background-color: var(--secondary);
+}
+  }
