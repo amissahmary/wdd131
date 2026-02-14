@@ -119,7 +119,7 @@ aside{
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -190,6 +190,53 @@ main div{
   border: 2px solid var(--neutral);
   height: auto;
 } 
+
+.join-form-section {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--secondary);
+    color: var(--neutral);
+    border-radius: 20px;
+    text-align: left;
+}
+
+.join-form-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.join-form-section form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.join-form-section form input,
+.join-form-section form select,
+.join-form-section form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.join-form-section form button {
+    background-color: var(--neutral);
+    color: var(--tertiary);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.join-form-section form button:hover {
+    background-color: var(--primary);
+    color: var(--tertiary);
+    transform: scale(1.05);
+}
+
 
 footer{
     border: 1px;
